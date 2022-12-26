@@ -2,17 +2,14 @@
 
 # BEGIN
 def reverse(str)
-  length = 0
+  i = 0
+  reversed_str = ''
   loop do
-    length += 1
-    break if str[length].nil?
+    break if str[i].nil?
+    reversed_str = str[i] + reversed_str
+    i += 1
   end
 
-  result = ''
-  while length.positive?
-    length -= 1
-    result += str[length]
-  end
-  result
+  reversed_str
 end
 # END
