@@ -1,20 +1,15 @@
 # frozen_string_literal: true
 
 # rubocop:disable Style/For
-
+# BEGIN
 def make_censored(text, stop_words)
-  # BEGIN
+
   censor = '$#%!'
-  result = []
+  words = text.split
 
-  stop_words.each do |stop_word|
-    result = text.split.map do |word|
-      censor if stop_word == word
-    end
-  end
-
-  result.join(' ')
-  # END
+  words.map do |word|
+    stop_words.any?(word) ? censor : word
+  end.join(' ')
 end
-
+# END
 # rubocop:enable Style/For
