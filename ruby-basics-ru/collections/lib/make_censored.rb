@@ -5,13 +5,15 @@
 def make_censored(text, stop_words)
   # BEGIN
   censor = '$#%!'
-  result = text
+  result = []
 
-  stop_words.each do |word|
-    result = result.gsub(word, censor)
+  stop_words.each do |stop_word|
+    result = text.split.map do |word|
+      censor if stop_word == word
+    end
   end
 
-  result
+  result.join(' ')
   # END
 end
 
