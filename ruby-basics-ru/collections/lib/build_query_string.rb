@@ -5,7 +5,7 @@
 def build_query_string(query)
   res = ''
   query.each_pair do |k, v|
-    res += "#{k}=#{v}&" 
+    res = "#{k}=#{v}&" + res
   end
 
   res.chop
