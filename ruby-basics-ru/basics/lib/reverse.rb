@@ -9,7 +9,7 @@ def reverse(str)
   end
   
   result = ''
-  while length > 0
+  while length.positive?
     length -= 1
     result += str[length]
   end

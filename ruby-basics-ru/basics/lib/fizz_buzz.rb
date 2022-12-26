@@ -3,14 +3,15 @@
 # BEGIN
 def fizz_buzz(start, stop)
   return if start > stop
+
   result = ''
   while start <= stop
-    result += if 0 == start % 3 && 0 == start % 5
-                "FizzBuzz "
-              elsif 0 == start % 3
-                "Fizz "
-              elsif 0 == start % 5
-                "Buzz "
+    result += if (start % 3).zero? && (start % 5).zero?
+                'FizzBuzz '
+              elsif (start % 3).zero?
+                'Fizz '
+              elsif (start % 5).zero?
+                'Buzz '
               else
                 "#{start} "
               end

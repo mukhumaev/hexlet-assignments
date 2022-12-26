@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 # BEGIN
-def fibonnacci(n)
-  return nil if n < 0
-  return n if n <= 1
-  fibonacci(n - 1) + fibonacci(n - 2)
+def fibonnacci(num)
+  return nil if num < 0
+  return num if num <= 1
+  fibonacci(num - 1) + fibonacci(num - 2)
 end
 # END
