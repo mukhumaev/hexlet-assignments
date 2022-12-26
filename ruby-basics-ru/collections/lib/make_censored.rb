@@ -8,7 +8,7 @@ def make_censored(text, stop_words)
   result = text
 
   stop_words.each do |word|
-    result.gsub!(word, censor)
+    result = result.gsub(word, censor)
   end
 
   result
